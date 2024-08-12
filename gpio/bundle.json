@@ -1,0 +1,35 @@
+{
+    "name": "@ohos/gpio",
+    "description": "gpio example.",	
+    "version": "3.1",	
+    "license": "Apache License 2.0", 
+    "publishAs": "code-segment", 
+    "segment": {
+        "destPath": "samples/gpio"	
+    },	
+    "dirs": {},	
+    "scripts": {},	
+    "component": {	
+        "name": "gpio",	
+        "subsystem": "samples",	
+        "syscap": [],	
+        "features": [],	
+        "adapted_system_type": [ "mini", "small", "standard" ],
+        "rom": "10KB",	
+        "ram": "10KB",	
+        "deps": {
+            "components": [],	 
+            "third_party": []	
+        },
+        "build": {	
+            "sub_component": [
+                "//samples/gpio:led_gpio",
+                "//samples/gpio:tm1637",
+                "//samples/gpio:sample_test",
+                "//samples/gpio:rgb"	
+            ],	
+            "inner_kits": [],	
+            "test": []	
+        }
+    }
+}

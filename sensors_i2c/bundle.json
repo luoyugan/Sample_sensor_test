@@ -1,0 +1,37 @@
+{
+    "name": "@ohos/sensors_i2c",
+    "description": "Sht sensors_i2c example.",	
+    "version": "4.0",	
+    "license": "Apache License 2.0", 
+    "publishAs": "code-segment", 
+    "segment": {
+        "destPath": "samples/sensors_i2c"	
+    },	
+    "dirs": {},	
+    "scripts": {},	
+    "component": {	
+        "name": "sensors_i2c",	
+        "subsystem": "samples",	
+        "syscap": [],	
+        "features": [],	
+        "adapted_system_type": [ "mini", "small", "standard"],
+        "rom": "100KB",	
+        "ram": "100KB",	
+        "deps": {
+            "components": [],	 
+            "third_party": []	
+        },
+        "build": {	
+            "sub_component": [
+                "//samples/sensors_i2c:sht30",
+                "//samples/sensors_i2c:i2c_test",
+                "//samples/sensors_i2c:sht30_HDF",
+                "//samples/sensors_i2c:veml7700",
+                "//samples/sensors_i2c:jy901b",
+                "//samples/sensors_i2c:jy901b_uart"
+            ],	
+            "inner_kits": [],	
+            "test": []	
+        }
+    }
+}

@@ -1,0 +1,268 @@
+import("//build/ohos.gni")  
+import("//drivers/hdf_core/adapter/uhdf2/uhdf.gni")
+
+ohos_executable("sht30") {
+  sources = [ "src/sht30.c" ] 
+  include_dirs = [
+    "$hdf_framework_path/include",
+    "$hdf_framework_path/include/core",
+    "$hdf_framework_path/include/osal",
+    "$hdf_framework_path/include/platform",
+    "$hdf_framework_path/include/utils",
+    "$hdf_uhdf_path/osal/include",
+    "$hdf_uhdf_path/ipc/include",
+    "//base/hiviewdfx/hilog/interfaces/native/kits/include",
+    "//third_party/bounds_checking_function/include",
+    "//drivers/hdf_core/framework/support/platform/include",
+    "//drivers/hdf_core/interfaces/inner_api/core",
+    "//drivers/peripheral/sensor/interfaces/include/",
+    "//drivers/hdf_core/framework/include/platform",
+    "//drivers/hdf_core/framework/model/sensor/driver/common/include/",
+    "//samples/include",
+    # "//drivers/hdf_core/framework/model/sensor/driver/temperature/",
+    # # "//drivers/peripheral/sensor/hal/include/",
+    # "//drivers/hdf_core/framework/model/sensor/driver/include"
+  ]
+
+  deps = [ 
+    "$hdf_uhdf_path/platform:libhdf_platform",
+    "$hdf_uhdf_path/utils:libhdf_utils",
+    "//base/hiviewdfx/hilog/interfaces/native/innerkits:libhilog",
+    "//drivers/peripheral/sensor/hal:hdi_sensor",
+  ]
+  cflags = [
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-format",
+    "-Wno-format-extra-args",
+  ]
+
+  cflags_c = []
+  cflags_cc = []
+  ldflags = []
+  configs = []
+  part_name = "sensors_i2c"
+  # install_images = [ "vendor" ]
+  install_enable = true
+  # module_install_dir = "bin"
+}
+
+ohos_executable("i2c_test") {
+  sources = [ "src/i2c_test.c" ] 
+  include_dirs = [
+    "$hdf_framework_path/include",
+    "$hdf_framework_path/include/core",
+    "$hdf_framework_path/include/osal",
+    "$hdf_framework_path/include/platform",
+    "$hdf_framework_path/include/utils",
+    "$hdf_uhdf_path/osal/include",
+    "$hdf_uhdf_path/ipc/include",
+    "//base/hiviewdfx/hilog/interfaces/native/kits/include",
+    "//third_party/bounds_checking_function/include",
+    "//drivers/hdf_core/framework/support/platform/include",
+    "//drivers/hdf_core/interfaces/inner_api/core",
+    "//drivers/peripheral/sensor/interfaces/include/",
+    "//drivers/hdf_core/framework/include/platform",
+    "//drivers/hdf_core/framework/model/sensor/driver/common/include/",
+    "//samples/include",
+  ]
+
+  deps = [ 
+    "$hdf_uhdf_path/platform:libhdf_platform",
+    "$hdf_uhdf_path/utils:libhdf_utils",
+    "//base/hiviewdfx/hilog/interfaces/native/innerkits:libhilog",
+    "//drivers/peripheral/sensor/hal:hdi_sensor",
+  ]
+  cflags = [
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-format",
+    "-Wno-format-extra-args",
+  ]
+
+  cflags_c = []
+  cflags_cc = []
+  ldflags = []
+  configs = []
+  part_name = "sensors_i2c"
+  # install_images = [ "vendor" ]
+  install_enable = true
+  # module_install_dir = "bin"
+}
+ohos_executable("sht30_HDF") {
+  sources = [ "src/sht30_HDF.c" ] 
+  include_dirs = [
+    "$hdf_framework_path/include",
+    "$hdf_framework_path/include/core",
+    "$hdf_framework_path/include/osal",
+    "$hdf_framework_path/include/platform",
+    "$hdf_framework_path/include/utils",
+    "$hdf_uhdf_path/osal/include",
+    "$hdf_uhdf_path/ipc/include",
+    "//base/hiviewdfx/hilog/interfaces/native/kits/include",
+    "//third_party/bounds_checking_function/include",
+    "//drivers/hdf_core/framework/support/platform/include",
+    "//drivers/hdf_core/interfaces/inner_api/core",
+    "//drivers/peripheral/sensor/interfaces/include/",
+    "//drivers/hdf_core/framework/include/platform",
+    "//drivers/hdf_core/framework/model/sensor/driver/common/include/",
+    "//samples/include",
+  ]
+
+  deps = [ 
+    "$hdf_uhdf_path/platform:libhdf_platform",
+    "$hdf_uhdf_path/utils:libhdf_utils",
+    "//base/hiviewdfx/hilog/interfaces/native/innerkits:libhilog",
+    "//drivers/peripheral/sensor/hal:hdi_sensor",
+  ]
+  cflags = [
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-format",
+    "-Wno-format-extra-args",
+  ]
+
+  cflags_c = []
+  cflags_cc = []
+  ldflags = []
+  configs = []
+  part_name = "sensors_i2c"
+  # install_images = [ "vendor" ]
+  install_enable = true
+  # module_install_dir = "bin"
+}
+
+ohos_executable("veml7700") {
+  sources = [ "src/veml7700.c" ] 
+  include_dirs = [
+    "$hdf_framework_path/include",
+    "$hdf_framework_path/include/core",
+    "$hdf_framework_path/include/osal",
+    "$hdf_framework_path/include/platform",
+    "$hdf_framework_path/include/utils",
+    "$hdf_uhdf_path/osal/include",
+    "$hdf_uhdf_path/ipc/include",
+    "//base/hiviewdfx/hilog/interfaces/native/kits/include",
+    "//third_party/bounds_checking_function/include",
+    "//drivers/hdf_core/framework/support/platform/include",
+    "//drivers/hdf_core/interfaces/inner_api/core",
+    "//drivers/peripheral/sensor/interfaces/include/",
+    "//drivers/hdf_core/framework/include/platform",
+    "//drivers/hdf_core/framework/model/sensor/driver/common/include/",
+    "//samples/include",
+  ]
+
+  deps = [ 
+    "$hdf_uhdf_path/platform:libhdf_platform",
+    "$hdf_uhdf_path/utils:libhdf_utils",
+    "//base/hiviewdfx/hilog/interfaces/native/innerkits:libhilog",
+    "//drivers/peripheral/sensor/hal:hdi_sensor",
+  ]
+  cflags = [
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-format",
+    "-Wno-format-extra-args",
+  ]
+
+  cflags_c = []
+  cflags_cc = []
+  ldflags = []
+  configs = []
+  part_name = "sensors_i2c"
+  # install_images = [ "vendor" ]
+  install_enable = true
+  # module_install_dir = "bin"
+}
+
+ohos_executable("jy901b") {
+  sources = [ "src/jy901b.c" ] 
+  include_dirs = [
+    "$hdf_framework_path/include",
+    "$hdf_framework_path/include/core",
+    "$hdf_framework_path/include/osal",
+    "$hdf_framework_path/include/platform",
+    "$hdf_framework_path/include/utils",
+    "$hdf_uhdf_path/osal/include",
+    "$hdf_uhdf_path/ipc/include",
+    "//base/hiviewdfx/hilog/interfaces/native/kits/include",
+    "//third_party/bounds_checking_function/include",
+    "//drivers/hdf_core/framework/support/platform/include",
+    "//drivers/hdf_core/interfaces/inner_api/core",
+    "//drivers/peripheral/sensor/interfaces/include/",
+    "//drivers/hdf_core/framework/include/platform",
+    "//drivers/hdf_core/framework/model/sensor/driver/common/include/",
+    "//samples/include",
+  ]
+
+  deps = [ 
+    "$hdf_uhdf_path/platform:libhdf_platform",
+    "$hdf_uhdf_path/utils:libhdf_utils",
+    "//base/hiviewdfx/hilog/interfaces/native/innerkits:libhilog",
+    "//drivers/peripheral/sensor/hal:hdi_sensor",
+  ]
+  cflags = [
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-format",
+    "-Wno-format-extra-args",
+  ]
+
+  cflags_c = []
+  cflags_cc = []
+  ldflags = []
+  configs = []
+  part_name = "sensors_i2c"
+  # install_images = [ "vendor" ]
+  install_enable = true
+  # module_install_dir = "bin"
+}
+
+ohos_executable("jy901b_uart") {
+  sources = [ "src/jy901b_uart.c" ] 
+  include_dirs = [
+    "$hdf_framework_path/include",
+    "$hdf_framework_path/include/core",
+    "$hdf_framework_path/include/osal",
+    "$hdf_framework_path/include/platform",
+    "$hdf_framework_path/include/utils",
+    "$hdf_uhdf_path/osal/include",
+    "$hdf_uhdf_path/ipc/include",
+    "//base/hiviewdfx/hilog/interfaces/native/kits/include",
+    "//third_party/bounds_checking_function/include",
+    "//drivers/hdf_core/framework/support/platform/include",
+    "//drivers/hdf_core/interfaces/inner_api/core",
+    "//drivers/peripheral/sensor/interfaces/include/",
+    "//drivers/hdf_core/framework/include/platform",
+    "//drivers/hdf_core/framework/model/sensor/driver/common/include/",
+    "//samples/include",
+  ]
+
+  deps = [ 
+    "$hdf_uhdf_path/platform:libhdf_platform",
+    "$hdf_uhdf_path/utils:libhdf_utils",
+    "//base/hiviewdfx/hilog/interfaces/native/innerkits:libhilog",
+    "//drivers/peripheral/sensor/hal:hdi_sensor",
+  ]
+  cflags = [
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-format",
+    "-Wno-format-extra-args",
+  ]
+
+  cflags_c = []
+  cflags_cc = []
+  ldflags = []
+  configs = []
+  part_name = "sensors_i2c"
+  # install_images = [ "vendor" ]
+  install_enable = true
+  # module_install_dir = "bin"
+}

@@ -1,0 +1,33 @@
+{
+    "name": "@ohos/uart",
+    "description": "uart example.",	
+    "version": "3.1",	
+    "license": "Apache License 2.0", 
+    "publishAs": "code-segment", 
+    "segment": {
+        "destPath": "samples/uart"	
+    },	
+    "dirs": {},	
+    "scripts": {},	
+    "component": {	
+        "name": "uart",	
+        "subsystem": "samples",	
+        "syscap": [],	
+        "features": [],	
+        "adapted_system_type": [ "mini", "small", "standard" ],
+        "rom": "10KB",	
+        "ram": "10KB",	
+        "deps": {
+            "components": [],	 
+            "third_party": []	
+        },
+        "build": {	
+            "sub_component": [
+                "//samples/uart:uart_test",
+                "//samples/uart:atgm336"	
+            ],	
+            "inner_kits": [],	
+            "test": []	
+        }
+    }
+}
